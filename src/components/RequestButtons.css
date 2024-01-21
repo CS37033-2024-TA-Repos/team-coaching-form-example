@@ -1,0 +1,7 @@
+.requestButtonsDiv {
+    outline: #01254A solid 6px;
+    border-radius: 32px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}

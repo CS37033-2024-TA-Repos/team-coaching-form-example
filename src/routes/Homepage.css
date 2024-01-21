@@ -1,0 +1,23 @@
+.HomepageDiv {
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavButton {
+    height: 48px;
+    width: 256px;
+    margin: 8px;
+    background-color: #01254A;
+    color: White;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
