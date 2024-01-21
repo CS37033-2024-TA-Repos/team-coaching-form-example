@@ -18,3 +18,16 @@
     border-radius: 32px;
     padding: 32px;
 }
+
+p {
+    margin: 0;
+}
+
+.comment {
+    height: 100px;
+    width: 250px;
+}
+
+input {
+    width: 250px;
+}
