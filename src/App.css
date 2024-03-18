@@ -6,3 +6,9 @@
     align-items: center;
     background-color: #DCE2E8;
 }
+
+
+h1 {
+    margin: 0 0 32px 0;
+    font-size: 64px;
+}

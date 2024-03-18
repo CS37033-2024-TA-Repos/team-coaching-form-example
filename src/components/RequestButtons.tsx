@@ -2,21 +2,22 @@ import React from 'react';
 import './RequestButtons.css';
 import {RequestButtonsInterface} from "../common/RequestButtonsInterface";
 
-function RequestButtons({submit, clear}: RequestButtonsInterface) {
+type requestButtonsProps = {
+    submit: Function
+    clear: Function
+}
+function RequestButtons(props: requestButtonsProps) {
     function handleSubmit() {
-        submit();
+        props.submit();
     }
 
     function handleClear() {
-        clear();
+        props.clear();
     }
     return (
         <div className={"requestButtonsDiv"}>
             <button onClick={handleSubmit}>Submit</button>
             <button onClick={handleClear}>Clear</button>
-            <a href={"/"}>
-                <button>Back</button>
-            </a>
         </div>
     );
 }
