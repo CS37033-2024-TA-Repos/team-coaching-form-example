@@ -1,6 +1,5 @@
 import React from 'react';
 import './RequestButtons.css';
-import {RequestButtonsInterface} from "../common/RequestButtonsInterface";
 
 type requestButtonsProps = {
     submit: Function
