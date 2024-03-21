@@ -4,28 +4,18 @@ import RequestButtons from "../components/RequestButtons";
 import {EmployeeFeedback} from "../common/EmployeeFeedback";
 
 function EmployeeFeedbackForm() {
-    const [name, setName] = useState("");
-    const [comment, setComment] = useState("");
-
-    function submit() {
-        if (name !== "" && comment !== "") {
-            const feedback: EmployeeFeedback = {name: name, comment: comment};
-            console.log(feedback);
-            clear();
-        }
-    }
+    const [feedback, setFeedback] = useState<EmployeeFeedback>({name: "", comment: ""});
 
     function clear() {
-        setName("");
-        setComment("");
+        setFeedback({name: "", comment: ""});
     }
 
     function handleNameInput(e: ChangeEvent<HTMLInputElement>) {
-        setName(e.target.value);
+        setFeedback({...feedback, name: e.target.value});
     }
 
     function handleCommentInput(e: ChangeEvent<HTMLTextAreaElement>) {
-        setComment(e.target.value);
+        setFeedback({...feedback, comment: e.target.value});
     }
 
 
@@ -35,11 +25,11 @@ function EmployeeFeedbackForm() {
           <div className={"formDiv"}>
               <div className={"inputDiv"}>
                   <p>Name:</p>
-                  <input onChange={handleNameInput} value={name}/>
+                  <input onChange={handleNameInput} value={feedback.name}/>
                   <p>Comment:</p>
-                  <textarea className={"comment"} onChange={handleCommentInput} value={comment}/>
+                  <textarea className={"comment"} onChange={handleCommentInput} value={feedback.comment}/>
               </div>
-              <RequestButtons submit={submit} clear={clear}/>
+              <RequestButtons feedback={feedback} clear={clear}/>
           </div>
       </div>
   );

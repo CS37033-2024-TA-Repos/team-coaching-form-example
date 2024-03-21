@@ -1,13 +1,15 @@
 import React from 'react';
 import './RequestButtons.css';
+import {EmployeeFeedback} from "../common/EmployeeFeedback";
 
 type requestButtonsProps = {
-    submit: Function
+    feedback: EmployeeFeedback
     clear: Function
 }
 function RequestButtons(props: requestButtonsProps) {
     function handleSubmit() {
-        props.submit();
+        console.log(props.feedback);
+        props.clear();
     }
 
     function handleClear() {
